@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+    #hamburger { display: none; }
+    #hamburger ~ * {
+      position: absolute;
+      transition: transform 0.4s;
+    }
+    #hamburger:checked ~ * { transform: translate3d(200px, 0, 0); }
+    #hamburger ~ label {
+      font-size: 54px;
+      top: -16px; left: 8px;
+      cursor: pointer;
+
+    }
+    #hamburger ~ nav {
+      background: black;
+      width: 200px;
+      left: -200px;
+      height: 100%;
+
+    }
+    #hamburger ~ nav * {
+      margin: 0; padding: 0;
+      color: white;
+    }
+    #hamburger ~ nav header {
+      background: teal;
+      padding: 1em;
+    }
+    #hamburger ~ nav a {
+      display: block;
+      text-decoration: none;
+      padding: 1em;
+    }
+    #hamburger ~ nav a:hover { background: gray; }
+
+    .menubar{
+    border:none;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+
+    }
+
+    .menubar ul{
+    background: rgb(109,109,109);
+    height:50px;
+    list-style:none;
+    margin:0;
+    padding:0;
+
+    }
+
+
+    .menubar li a{
+    background: rgb(109,109,109);
+    color:#cccccc;
+    display:block;
+    font-weight:normal;
+
+    margin:0px;
+
+    text-align:center;
+    text-decoration:none;
+
+    }
+
+    .menubar li a:hover, .menubar ul li:hover a{
+    background: rgb(71,71,71);
+    color:#FFFFFF;
+    text-decoration:none;
+      z-index: 4;
+    }
+
+    .menubar li ul{
+    background: rgb(109,109,109);
+    display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    position:absolute;
+    width:200px;
+    z-index:200;
+      z-index: 4;
+    /*top:1em;
+    /*left:0;*/
+    }
+
+    .menubar li:hover ul{
+    display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+    }
+
+    .menubar li li {
+    background: rgb(109,109,109);
+    display:block;
+    float:none;
+    margin:0px;
+    padding:0px;
+    width:200px;
+    }
+
+    .menubar li:hover li a{
+    background:none;
+    }
+
+    .menubar li ul a{
+    display:block;
+    height:50px;
+    font-size:12px;
+    font-style:normal;
+    margin:0px;
+    padding:0px 10px 0px 15px;
+    text-align:left;
+    }
+
+    .menubar li ul a:hover, .menubar li ul li:hover a{
+    background: rgb(71,71,71);
+    border:0px;
+    color:#ffffff;
+    text-decoration:none;
+    }
+
+    .menubar p{
+    clear:left;
+    }
+    .wrap_sample {
+        width:700px;
+        height:1000px;
+        background:#ddd;
+        position:relative;
+        overflow:hidden;
+    }
+    #slide_sample {
+        width:700px;
+        height:1000px;
+        position:absolute;
+        right:-150px;
+        background:#aaa;
+        transition:.5s
+    }
+    .wrap_sample:hover #slide_sample {
+        right:0;
+        transition:.5s;
+    }
+
+      #jb-container {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-header {
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-content {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: left;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-sidebar {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: right;
+        border: 1px solid #bcbcbc;
+      }
+      #jb-footer {
+        clear: both;
+        padding: 20px;
+        border: 1px solid #bcbcbc;
+      }
+      @media ( max-width: 480px ) {
+        #jb-container {
+          width: auto;
+        }
+        #jb-content {
+          float: none;
+          width: auto;
+        }
+        #jb-sidebar {
+          float: none;
+          width: auto;
+        }
+      }
+      img
+{
+  max-width: 100%;
+  height: auto;
+  width: 30%;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+
+          <nav id='menus'>
+        <input id="hamburger" type="checkbox" class="menubar" /><label for="hamburger">&equiv;</label>
+     <nav>
+
+       <div class="menubar">
+    <ul>
+
+    <li><a href="#" id="current">드라마</a>
+     <ul>
+        <li><a href='index.html' style= "text-decoration:none;">소개</a></li>
+        <li><a href='ff.html' style= "text-decoration:none;">등장인물</a></li>
+        <li><a href='fff.html' style= "text-decoration:none;">이미지갤러리</a></li>
+
+       </ul>
+       <li><a href='ffff.html' style= "text-decoration:none;">웹툰</a></li>
+    </li>
+    <li><a href='fffff.html' style= "text-decoration:none;">작가</a></li>
+    <li><a href="https://www.youtube.com/watch?v=rWxRJS4n23w">OST</a></li>
+    </ul>
+    </div>
+              </header>
+    <div id="jb-container">
+      <div id="jb-header">
+        <h1>Responsive Layout</h1>
+        <img src="a.gif">
+        <img src="./img/c00.png">
+
+      </div>
+      <div id="jb-content">
+        <h2>Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
+      <img src="a.gif" width="10"></div>
+      <div id="jb-sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+          <li>Lorem</li>
+          <li>Ipsum</li>
+          <li>Dolor</li>
+        </ul>
+        <img src="a.gif">
+        <img src="a.gif">
+        <img src="a.gif">
+        <img src="a.gif">
+        <img src="a.gif">
+
+      </div>
+      <div id="jb-footer">
+
+        <p>Copyright</p>
+      </div>
+    </div>
+  </body>
+</html>
