@@ -1,0 +1,241 @@
+<!--21961020 김유정-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="1.css">
+  </head>
+    <title></title>
+    <style>
+
+   video {
+     max-width: 100%;
+     height: auto;
+     display:block;
+     margin:0px;
+     padding:0px;
+     top:0;
+   position: relative;
+   }
+   p {
+     position:1800px;
+   }
+   img.relative {
+   			 position: relative;
+   			 left: 92%;
+
+   		 }
+
+             * {
+               padding: 0;
+               margin: 0;
+             }
+
+             #menus {
+               float: center;
+               /* border: solid 1px red; */
+             }
+
+
+         #hamburger { display: none; }
+         #hamburger ~ * {
+         position: absolute;
+         transition: transform 0.4s;
+         }
+         #hamburger:checked ~ * { transform: translate3d(200px, 0, 0); }
+         #hamburger ~ label {
+         font-size: 54px;
+         top: -3px; left: 8px;
+         cursor: pointer;
+
+         }
+         #hamburger ~ nav {
+         background: black;
+         width: 200px;
+         left: -200px;
+         height: 100%;
+
+         }
+         #hamburger ~ nav * {
+         margin: 0; padding: 0;
+
+         }
+         #hamburger ~ nav header {
+         background: teal;
+         padding: 1em;
+
+         }
+         #hamburger ~ nav a {
+         display: block;
+         text-decoration: none;
+         padding: 1em;
+
+
+         }
+         #hamburger ~ nav a:hover { background: blue; }
+
+         .menubar{
+         border:none;
+         border:0px;
+         margin:0px;
+         padding:0px;
+         font: 67.5% "아리따-돋움(TTF)-Light";
+         font-size:14px;
+
+
+         }
+
+         .menubar ul{
+         background: blue;
+         height:50px;
+         list-style:none;
+         margin:0;
+         padding:0;
+
+
+         }
+
+
+         .menubar li a{
+         background: black;
+         color:white;
+         display:block;
+         font-weight:normal;
+
+         margin:0px;
+
+         text-align:center;
+         text-decoration:none;
+
+         }
+
+         .menubar li a:hover, .menubar ul li:hover a{
+         background: blue;
+         color:black;
+         text-decoration:none;
+         z-index: 4;
+         }
+
+         .menubar li ul{
+         background: black;
+         display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+         height:auto;
+         padding:0px;
+         margin:0px;
+         border:0px;
+         position:absolute;
+         width:200px;
+         z-index:200;
+         z-index: 4;
+         /*top:1em;
+         /*left:0;*/
+         }
+
+         .menubar li:hover ul{
+         display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+         }
+
+         .menubar li li {
+         background: white;
+         display:block;
+         float:none;
+         margin:0px;
+         padding:0px;
+         width:200px;
+         }
+
+         .menubar li:hover li a{
+         background:none;
+         }
+
+         .menubar li ul a{
+         display:block;
+         height:50px;
+         font-size:12px;
+         font-style:normal;
+         margin:0px;
+         padding:0px 10px 0px 15px;
+         text-align:left;
+         }
+
+         .menubar li ul a:hover, .menubar li ul li:hover a{
+         background: rgb(71,71,71);
+         border:0px;
+         color:#ffffff;
+         text-decoration:none;
+         }
+
+         .menubar p{
+         clear:left;
+         }
+       a:link {text-decoration:none; color:black;}
+       a:visited {text-decoration:none; color:black;}
+       a:active {text-decoration:none; color:black;}
+       a:hover {text-decoration:none; color:blue;}
+
+
+
+
+
+         .over { position: relative;
+         z-index: 1; /*위에 올라가는 레이어의 포지션은 top, bottom 둘 중 하나, left, right 둘 중 하나의 속성을 선택하여 잡아준다.*/}
+         .wrap { position: relative;
+         }
+         img {
+         margin:0px;
+         padding:0px;
+         top:0;
+
+         z-index: 2;
+         max-width: 100%;
+         height:auto;
+         display:block;
+
+          }
+
+         </style>
+
+         </head>
+         <body>
+
+
+           <div class="over">
+               <input id="hamburger" type="checkbox" class="menubar" /><label for="hamburger"><img src="./img/nav.png"></label>
+            <nav>
+
+              <div class="menubar">
+           <ul>
+             <li><a href='index_219610201.html' style= "text-decoration:none;">Home</a></li>
+             <li><a href="#" id="current">한글서체</a>
+              <ul>
+                 <li><a href='1.html' style= "text-decoration:none;">서체꼴이야기</a></li>
+                 <li><a href='2.html' style= "text-decoration:none;">사이사이</a></li>
+                 <li><a href='3.html' style= "text-decoration:none;">크기와무게</a></li>
+                </ul>
+                <li><a href="#" id="current">영문서체</a>
+                 <ul>
+                    <li><a href='4.html' style= "text-decoration:none;">서체꼴이야기</a></li>
+                    <li><a href='5.html' style= "text-decoration:none;">사이사이</a></li>
+                    <li><a href='6.html' style= "text-decoration:none;">크기와무게</a></li>
+                   </ul>
+                <li><a href='7.html' style= "text-decoration:none;">형태와컬러</a></li>
+             </li>
+             <li><a href='0.html' style= "text-decoration:none;">실사의위력</a></li>
+             <li><a href='index_21961020.html' style= "text-decoration:none;">포트폴리오사이트</a></li>
+
+           </ul>
+           </div>
+           </nav>
+           </div>
+
+        <div class="wrap">
+
+
+            <img src="./img/c3.png"></img>
+        </div>
+<a style="display:scroll;bottom:10px;right:5px;" href="#"><img src="./img/p.png" class="relative"></a>
+
+
+
+  </body>
+</html>

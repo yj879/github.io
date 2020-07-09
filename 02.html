@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="11.css">
+    <style>
+    #hamburger { display: none; }
+    #hamburger ~ * {
+    position: absolute;
+    transition: transform 0.4s;
+    }
+    #hamburger:checked ~ * { transform: translate3d(200px, 0, 0); }
+    #hamburger ~ label {
+    font-size: 54px;
+    top: -3px; left: 8px;
+    cursor: pointer;
+
+    }
+    #hamburger ~ nav {
+    background: black;
+    width: 200px;
+    left: -200px;
+    height: 100%;
+
+    }
+    #hamburger ~ nav * {
+    margin: 0; padding: 0;
+
+    }
+    #hamburger ~ nav header {
+    background: teal;
+    padding: 1em;
+
+    }
+    #hamburger ~ nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+
+
+    }
+    #hamburger ~ nav a:hover { background: red; }
+
+    .menubar{
+    border:none;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    font: 67.5% "아리따-돋움(TTF)-Light";
+    font-size:14px;
+
+
+    }
+
+    .menubar ul{
+    background: red;
+    height:50px;
+    list-style:none;
+    margin:0;
+    padding:0;
+
+
+    }
+
+
+    .menubar li a{
+    background: black;
+    color:white;
+    display:block;
+    font-weight:normal;
+
+    margin:0px;
+
+    text-align:center;
+    text-decoration:none;
+
+    }
+
+    .menubar li a:hover, .menubar ul li:hover a{
+    background: red;
+    color:black;
+    text-decoration:none;
+    z-index: 4;
+    }
+
+    .menubar li ul{
+    background: black;
+    display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    position:absolute;
+    width:200px;
+    z-index:200;
+    z-index: 4;
+    /*top:1em;
+    /*left:0;*/
+    }
+
+    .menubar li:hover ul{
+    display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+    }
+
+    .menubar li li {
+    background: white;
+    display:block;
+    float:none;
+    margin:0px;
+    padding:0px;
+    width:200px;
+    }
+
+    .menubar li:hover li a{
+    background:none;
+    }
+
+    .menubar li ul a{
+    display:block;
+    height:50px;
+    font-size:12px;
+    font-style:normal;
+    margin:0px;
+    padding:0px 10px 0px 15px;
+    text-align:left;
+    }
+
+    .menubar li ul a:hover, .menubar li ul li:hover a{
+    background: red;
+    border:0px;
+    color:#ffffff;
+    text-decoration:none;
+    }
+
+    .menubar p{
+    clear:left;
+    }
+    .wrap_sample {
+        width:700px;
+        height:1000px;
+        background:#ddd;
+        position:relative;
+        overflow:hidden;
+    }
+    #slide_sample {
+        width:700px;
+        height:1000px;
+        position:absolute;
+        right:-150px;
+        background:#aaa;
+        transition:.5s
+    }
+    .wrap_sample:hover #slide_sample {
+        right:0;
+        transition:.5s;
+    }
+
+      #jb-container {
+        max-width: 100%;
+        height: auto;
+        margin: 0px auto;
+        display:block;
+        position: relative;
+        z-index: 1;
+
+
+
+      }
+      #jb-header {
+display:block;
+        margin-bottom: 20px;
+        z-index: 2;
+
+      }
+      #jb-content {
+        max-width: 100%;
+        height: auto;
+display:block;
+        margin-bottom: 20px;
+        float: left;
+
+      }
+      #jb-sidebar {
+        max-width: 100%;
+        height: auto;
+display:block;
+        margin-bottom: 20px;
+        float: right;
+
+      }
+      #jb-footer {
+        clear: both;
+        padding: 20px;
+text-align: center;
+
+  background-color: #d0d0d0;
+      }
+      @media ( max-width: 480px ) {
+        #jb-container {
+          width: auto;
+          position: relative;
+          z-index: 1;
+
+        }
+        #jb-content {
+          float: none;
+          width: auto;
+        }
+        #jb-sidebar {
+          float: none;
+          width: auto;
+        }
+        #jb-header {
+  display:block;
+position: relative;
+          z-index: 2;
+
+        }
+        #jb-footer {
+          clear: both;
+  text-align: center;
+  padding: 40px;
+
+  border: 1px solid #bcbcbc;
+        }
+      }
+
+
+.fixed-bg {
+  background-image: url("./img/in.png");
+  min-height: 500px;
+  min-widht: 1200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:block;
+}
+
+img {
+margin:0px;
+padding:0px;
+top:0;
+max-width: 100%;
+height: auto;
+display:block;
+
+ }
+ video {
+   max-width: 100%;
+   height: 100%;
+   display:block;
+   margin:0px;
+   padding:0px;
+   top:0;
+ position: relative;
+ }
+ }
+a:link {text-decoration:none; color:black;}
+a:visited {text-decoration:none; color:black;}
+a:active {text-decoration:none; color:black;}
+a:hover {text-decoration:none; color:blue;}
+    </style>
+  </head>
+  <body>
+
+      <div id="jb-container">
+            <input id="hamburger" type="checkbox" class="menubar" /><label for="hamburger">&equiv;</label>
+         <nav>
+
+                      <div class="menubar">
+                   <ul>
+                     <li><a href='index.html' style= "text-decoration:none;">Home</a></li>
+                   <li><a href="02.html" id="current">나의소개</a>
+
+                      <li><a href="#" id="current">작업물</a>
+                       <ul>
+                          <li><a href='index2.html' style= "text-decoration:none;">앱디자인공모전</a></li>
+                          <li><a href='index_219610201.html' style= "text-decoration:none;">타이포에세이웹</a></li>
+                          <li><a href='index_219610202.html' style= "text-decoration:none;">웹퍼블리싱사이트</a></li>
+                         </ul>
+                      <li><a href='03.html' style= "text-decoration:none;">연락처</a></li>
+                   </li>
+
+                   </ul>
+                   </div>
+                   </nav>
+                   <div style="left: 900px; top:820px; font-weight: lighter; position: absolute;">
+           <div><a href="#top" name="bottom"></a></div></div>
+                 </div>
+
+
+
+<center><img src="./img/p2.png" width=></img></center>
+<center><img src="./img/ab.png" width="360"></img></center>
+<video muted autoplay loop>
+    <source src="./img/ab.mp4" type="video/mp4" width="40">
+      <strong>Your browser does not support the video tag.</strong>
+    </video>
+
+
+
+      <div id="jb-footer">
+
+          <p>Copyright 2020 © Kim Yujeong, All rights reserved</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
